@@ -73,6 +73,19 @@ showCollection(collection);
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
+function findByArtist(string1) {
+    let results = []
+    for (album of collection) {
+        if (album.artist === string1) {
+            results.push(album);
+        }
+    }
+    return results
+}
+console.log("Testing for Hen", findByArtist("Hen"));
+console.log("Testing for Word", findByArtist("Word"));
+console.log("Testing for Orange",findByArtist("Orange"));
+
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
 
 // > When testing your functions, write all tests in the JavaScript file!
